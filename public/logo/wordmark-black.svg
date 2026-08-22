@@ -1,0 +1,7 @@
+<svg viewBox="0 0 580 130" width="580" height="130" xmlns="http://www.w3.org/2000/svg">
+  <style>@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&amp;family=Inter:wght@600&amp;display=swap");</style>
+  <text x="0" y="90" font-family="Inter, sans-serif" font-weight="600" font-size="120" letter-spacing="18" fill="#0B0B0D">META</text>
+  <g transform="translate(400,91.7) skewX(-2) translate(-400,-91.7)">
+    <text x="400" y="91.7" font-family="Cormorant Garamond, serif" font-style="italic" font-weight="500" font-size="114" fill="#0B0B0D">shift</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #a68b4d;
+  color: #0b0b0d;
+}
+
+:focus-visible {
+  outline: 1px solid #a68b4d;
+  outline-offset: 4px;
+}
