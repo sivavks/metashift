@@ -24,7 +24,7 @@ function LogoMark() {
           strokeWidth={5.5}
           strokeLinecap="round"
         />
-        <path d="M66.0 70.5 L92.8 49.6" stroke="#A68B4D" strokeWidth={5.4} strokeLinecap="round" />
+        <path d="M66.0 70.5 L92.8 49.6" stroke="#D4A44E" strokeWidth={5.4} strokeLinecap="round" />
       </svg>
       <span className="font-sans text-sm font-semibold uppercase tracking-[0.15em] text-foreground">
         META
@@ -55,7 +55,11 @@ export function Logo({ className, asLink = true }: LogoProps) {
   }
 
   return (
-    <Link href="#hero" aria-label="MetaShift — home" className={classes}>
+    <Link
+      href="#hero"
+      aria-label="MetaShift — home"
+      className={cn(classes, "-my-3 py-3")}
+    >
       <LogoMark />
     </Link>
   );

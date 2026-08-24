@@ -53,7 +53,7 @@ export function ReflectionQuestions() {
                   <button
                     key={option}
                     onClick={handleSelect}
-                    className="flex-1 border border-white/10 px-6 py-4 text-sm text-muted transition-all duration-500 ease-out hover:border-gold/50 hover:text-foreground sm:max-w-xs"
+                    className="flex-1 border border-white/10 px-6 py-4 text-sm text-muted transition-all duration-300 ease-out hover:border-gold hover:bg-gold/[0.06] hover:text-foreground active:scale-[0.98] active:bg-gold/10 sm:max-w-xs"
                   >
                     {option}
                   </button>

@@ -5,16 +5,22 @@ import { motion } from "framer-motion";
 import { useModal } from "@/components/modal/ModalContext";
 import { Logo } from "@/components/ui/Logo";
 
-export function Nav() {
-  const [visible, setVisible] = useState(false);
+interface NavProps {
+  /** Skip the scroll-triggered reveal and render visible immediately (non-homepage pages). */
+  alwaysVisible?: boolean;
+}
+
+export function Nav({ alwaysVisible = false }: NavProps) {
+  const [visible, setVisible] = useState(alwaysVisible);
   const { open } = useModal();
 
   useEffect(() => {
+    if (alwaysVisible) return;
     const onScroll = () => setVisible(window.scrollY > window.innerHeight * 0.7);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [alwaysVisible]);
 
   return (
     <motion.header
@@ -28,7 +34,7 @@ export function Nav() {
       <button
         type="button"
         onClick={open}
-        className="text-[11px] uppercase tracking-[0.2em] text-muted transition-colors duration-300 hover:text-gold"
+        className="-my-3.5 -mr-2 px-2 py-3.5 text-[11px] uppercase tracking-[0.2em] text-muted transition-colors duration-300 hover:text-gold"
       >
         Begin
       </button>

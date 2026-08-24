@@ -25,7 +25,7 @@ export default async function Image() {
         <div style={{ display: "flex", fontSize: 54, marginTop: 32, color: "#F5F5F5", maxWidth: 820, textAlign: "center", justifyContent: "center" }}>
           Most people don&apos;t need more motivation.
         </div>
-        <div style={{ display: "flex", fontSize: 54, marginTop: 8, color: "#A68B4D" }}>
+        <div style={{ display: "flex", fontSize: 54, marginTop: 8, color: "#D4A44E" }}>
           They need a shift.
         </div>
       </div>

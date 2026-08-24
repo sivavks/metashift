@@ -8,8 +8,8 @@ const config: Config = {
         background: "#0B0B0D",
         foreground: "#F5F5F5",
         muted: "#8A8A8A",
-        gold: "#A68B4D",
-        "gold-light": "#B9A272",
+        gold: "#D4A44E",
+        "gold-light": "#DDB671",
       },
       fontFamily: {
         serif: ["var(--font-heading)", "Georgia", "serif"],

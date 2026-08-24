@@ -125,7 +125,7 @@ export function ReflectionModal() {
               type="button"
               onClick={close}
               aria-label="Close"
-              className="absolute right-5 top-5 text-xs uppercase tracking-[0.2em] text-muted transition-colors duration-300 hover:text-foreground"
+              className="absolute right-5 top-5 -m-4 p-4 text-xs uppercase tracking-[0.2em] text-muted transition-colors duration-300 hover:text-foreground"
             >
               Close
             </button>

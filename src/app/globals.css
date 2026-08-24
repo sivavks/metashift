@@ -17,11 +17,11 @@ body {
 }
 
 ::selection {
-  background-color: #a68b4d;
+  background-color: #d4a44e;
   color: #0b0b0d;
 }
 
 :focus-visible {
-  outline: 1px solid #a68b4d;
+  outline: 1px solid #d4a44e;
   outline-offset: 4px;
 }

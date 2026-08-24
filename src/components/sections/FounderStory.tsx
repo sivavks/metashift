@@ -9,16 +9,24 @@ export function FounderStory() {
 
       <div className="mt-10 space-y-8 font-serif text-xl leading-relaxed text-muted sm:text-2xl">
         <FadeIn delay={0.05}>
-          <p>For years, he fixed systems for a living.</p>
+          <p>I spent years fixing systems for a living.</p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="text-foreground">Then he noticed the real problem was never the system.</p>
+          <p className="text-foreground">
+            Then, one ordinary week, I turned that same attention on my own life — and couldn&apos;t
+            find the flaw. Not because it was fine. Because I&apos;d never actually looked.
+          </p>
         </FadeIn>
         <FadeIn delay={0.15}>
-          <p>It was people. Brilliant people, running decisions on programming they never chose.</p>
+          <p>
+            I was running on beliefs I never chose. Decisions made by a version of me that no
+            longer existed.
+          </p>
         </FadeIn>
         <FadeIn delay={0.2}>
-          <p className="text-gold">MetaShift was born from trying to fix that.</p>
+          <p className="text-gold">
+            That question — how much of my life is actually mine — is why MetaShift exists.
+          </p>
         </FadeIn>
       </div>
     </section>

@@ -71,3 +71,62 @@ export async function submitReflection(
 
   return { ok: true };
 }
+
+export interface ReservationSubmission {
+  name: string;
+  email: string;
+  phone: string;
+  city?: string;
+}
+
+export async function submitReservation(
+  data: ReservationSubmission
+): Promise<SubmissionResult> {
+  const name = data.name?.trim();
+  const email = data.email?.trim();
+  const phone = data.phone?.trim();
+  const city = data.city?.trim() || null;
+
+  if (!name || !email || !phone) {
+    return { ok: false, error: "Name, email, and phone are required." };
+  }
+  if (!EMAIL_RE.test(email)) {
+    return { ok: false, error: "That email doesn't look right." };
+  }
+
+  try {
+    const supabase = getSupabaseServerClient();
+    const { error: dbError } = await supabase
+      .from("reservations")
+      .insert({ name, email, phone, city });
+
+    if (dbError) {
+      console.error("Supabase insert failed:", dbError.message);
+      return { ok: false, error: "Something went wrong. Please try again." };
+    }
+  } catch (err) {
+    console.error("Supabase not configured or unreachable:", err);
+    return { ok: false, error: "Something went wrong. Please try again." };
+  }
+
+  if (process.env.RESEND_API_KEY) {
+    try {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: process.env.RESEND_FROM_ADDRESS || "MetaShift <onboarding@resend.dev>",
+        to: NOTIFY_ADDRESS,
+        subject: `New First Shift reservation — ${name}`,
+        text: [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Phone: ${phone}`,
+          `City: ${city || "(none)"}`,
+        ].join("\n"),
+      });
+    } catch (err) {
+      console.error("Email notification failed:", err);
+    }
+  }
+
+  return { ok: true };
+}

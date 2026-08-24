@@ -45,6 +45,14 @@ export function OSComparison() {
           </ul>
         </FadeIn>
       </div>
+
+      <FadeIn delay={0.1} className="mx-auto mt-24 max-w-xl text-center">
+        <p className="text-base leading-relaxed text-muted sm:text-lg">
+          MetaShift is a short, guided process for seeing the beliefs that have been running
+          you — then consciously choosing new ones. Not therapy. Not productivity. A different
+          operating system for the one life you have.
+        </p>
+      </FadeIn>
     </section>
   );
 }

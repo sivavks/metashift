@@ -7,7 +7,7 @@ import { OSComparison } from "@/components/sections/OSComparison";
 import { FounderStory } from "@/components/sections/FounderStory";
 import { JourneyTimeline } from "@/components/sections/JourneyTimeline";
 import { ThoughtExperiment } from "@/components/sections/ThoughtExperiment";
-import { Workshop } from "@/components/sections/Workshop";
+import { FirstShiftTeaser } from "@/components/sections/FirstShiftTeaser";
 import { Footer } from "@/components/sections/Footer";
 import { ModalProvider } from "@/components/modal/ModalContext";
 import { ReflectionModal } from "@/components/modal/ReflectionModal";
@@ -25,7 +25,7 @@ export default function Home() {
         <FounderStory />
         <JourneyTimeline />
         <ThoughtExperiment />
-        <Workshop />
+        <FirstShiftTeaser />
       </main>
       <Footer />
       <ReflectionModal />
