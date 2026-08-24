@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { reflectionQuestions } from "@/lib/content";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { Cta } from "@/components/ui/Cta";
 
 const EASE: [number, number, number, number] = [0.16, 0.8, 0.24, 1];
 
@@ -15,10 +16,11 @@ export function ReflectionQuestions() {
   const isLast = index === reflectionQuestions.length - 1;
 
   function handleSelect() {
+    if (done) return;
     if (isLast) {
       setDone(true);
     } else {
-      setIndex((i) => i + 1);
+      setIndex((i) => Math.min(i + 1, reflectionQuestions.length - 1));
     }
   }
 
@@ -66,14 +68,30 @@ export function ReflectionQuestions() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: EASE }}
-              className="flex flex-col items-center gap-3"
+              className="flex flex-col items-center gap-6"
             >
-              <p className="font-serif text-2xl text-muted sm:text-3xl">
-                You don&apos;t have a motivation problem.
+              <p className="font-serif text-2xl italic text-gold sm:text-3xl">
+                Interesting&hellip;
               </p>
-              <p className="font-serif text-2xl text-gold sm:text-3xl">
-                You have an operating system problem.
-              </p>
+              <div className="max-w-lg space-y-5 font-serif text-lg leading-relaxed text-muted sm:text-xl">
+                <p>
+                  Most people expect these questions to reveal something about their
+                  personality.
+                </p>
+                <p className="text-foreground">They don&apos;t.</p>
+                <p>
+                  They reveal something far more important: whether you&apos;re living by
+                  design&hellip; or by default.
+                </p>
+                <p>
+                  Your answers don&apos;t tell us who you are. But they might suggest that some
+                  of the decisions shaping your life deserve a second look.
+                </p>
+                <p className="text-gold">That&apos;s exactly what MetaShift exists to explore.</p>
+              </div>
+              <div className="mt-4">
+                <Cta href="/first-shift">Discover The First Shift</Cta>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

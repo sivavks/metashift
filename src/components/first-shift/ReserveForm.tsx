@@ -51,11 +51,21 @@ export function ReserveForm() {
           transition={{ duration: 0.7, ease: EASE }}
           className="mx-auto max-w-md text-center"
         >
-          <h3 className="font-serif text-2xl italic text-foreground">You&apos;re in.</h3>
-          <p className="mt-5 text-sm leading-relaxed text-muted">
-            Twenty seats. One room. We&apos;ll send the details to your email.
+          <h3 className="font-serif text-3xl italic text-foreground">You&apos;re in.</h3>
+          <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted">
+            <p>Thank you for choosing to invest in yourself.</p>
+            <p>
+              Over the next few days you&apos;ll receive everything you need to prepare for The
+              First Shift.
+            </p>
+          </div>
+          <p className="mt-8 text-xs uppercase tracking-[0.3em] text-muted">Until then&hellip;</p>
+          <p className="mt-4 text-sm text-muted">Carry one question with you.</p>
+          <p className="mt-4 font-serif text-xl italic text-gold">
+            &ldquo;What part of your life have you accepted without ever consciously
+            choosing?&rdquo;
           </p>
-          <p className="mt-3 text-sm text-gold">See you there.</p>
+          <p className="mt-8 text-sm text-foreground">See you soon.</p>
         </motion.div>
       ) : (
         <motion.form

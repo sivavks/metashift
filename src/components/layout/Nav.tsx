@@ -36,7 +36,7 @@ export function Nav({ alwaysVisible = false }: NavProps) {
         onClick={open}
         className="-my-3.5 -mr-2 px-2 py-3.5 text-[11px] uppercase tracking-[0.2em] text-muted transition-colors duration-300 hover:text-gold"
       >
-        Begin
+        What&apos;s Running You?
       </button>
     </motion.header>
   );
