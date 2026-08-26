@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 export function FounderStory() {
@@ -29,6 +30,22 @@ export function FounderStory() {
           </p>
         </FadeIn>
       </div>
+
+      <FadeIn delay={0.25} className="mt-14 flex flex-col items-center text-center">
+        <div className="relative h-32 w-32 overflow-hidden rounded-full sm:h-36 sm:w-36">
+          <Image
+            src="/images/founder.png"
+            alt="Sivakumar Vondivillu, founder of MetaShift"
+            fill
+            sizes="144px"
+            className="object-cover"
+            priority={false}
+          />
+        </div>
+        <p className="mt-6 text-sm text-muted">
+          &mdash; Sivakumar Vondivillu, <span className="text-muted/70">Founder, MetaShift</span>
+        </p>
+      </FadeIn>
     </section>
   );
 }

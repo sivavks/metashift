@@ -32,7 +32,7 @@ export function Hero() {
       >
         <motion.span
           variants={item}
-          className="font-serif text-lg tracking-[0.55em] text-muted md:text-xl"
+          className="font-serif text-lg tracking-[0.55em] text-[#9B9B9B] md:text-xl"
         >
           METASHIFT
         </motion.span>

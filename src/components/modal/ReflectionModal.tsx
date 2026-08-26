@@ -6,6 +6,7 @@ import { useModal } from "@/components/modal/ModalContext";
 import { reflectionAreas } from "@/lib/content";
 import { submitReflection } from "@/app/actions";
 import { cn } from "@/lib/utils";
+import { Cta } from "@/components/ui/Cta";
 
 const EASE: [number, number, number, number] = [0.16, 0.8, 0.24, 1];
 type Status = "idle" | "submitting" | "success" | "error";
@@ -150,7 +151,7 @@ export function ReflectionModal() {
                     <p className="text-foreground">
                       Your MetaShift has already begun.
                       <br />
-                      I&apos;ll be in touch soon.
+                      I&apos;ll send you a short reflection shortly.
                     </p>
                   </div>
                   <p className="text-xs uppercase tracking-[0.3em] text-muted">Until then&hellip;</p>
@@ -158,6 +159,13 @@ export function ReflectionModal() {
                     &ldquo;What part of your life have you accepted without ever consciously
                     choosing?&rdquo;
                   </p>
+                  <p className="text-sm text-muted">Take that question with you today.</p>
+
+                  <div className="mx-auto h-px w-12 bg-white/10" />
+
+                  <div className="flex justify-center">
+                    <Cta href="/first-shift">Discover The First Shift</Cta>
+                  </div>
                 </motion.div>
               ) : (
                 <motion.form

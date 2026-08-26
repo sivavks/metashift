@@ -20,8 +20,8 @@ function LogoMark() {
       >
         <path
           d="M63 72.52 A26 26 0 1 1 68.70 68.06"
-          stroke="#5C5C60"
-          strokeWidth={5.5}
+          stroke="#717176"
+          strokeWidth={6.2}
           strokeLinecap="round"
         />
         <path d="M66.0 70.5 L92.8 49.6" stroke="#D4A44E" strokeWidth={5.4} strokeLinecap="round" />
